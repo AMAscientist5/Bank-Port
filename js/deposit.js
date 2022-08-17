@@ -5,6 +5,14 @@ document.getElementById('btn-deposit').addEventListener('click', function() {
     let depositField = document.getElementById('deposit-field');
     let depositFieldValue = parseFloat(depositField.value);
 
+    depositField.value = "";
+
+    if (isNaN(depositFieldValue)) {
+        alert('Please Provide a Valid Number')
+        return;
+    }
+
+
 
     // getting updating value and parsing to number from string
     let depositUpdatingelement = document.getElementById('deposit-updating');
